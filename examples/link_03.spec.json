@@ -1,0 +1,28 @@
+{
+  "name": "Link 03 - reconstructed from dimensions",
+  "units": "mm",
+  "datasource": {
+    "image": "03_tangent_dark.jpg",
+    "read_by": "vision pass on the pasted screenshot",
+    "dimensions_used": ["Ø36", "Ø17", "Ø15", "Ø8", "R80", "R160", "53"],
+    "dimensions_not_yet_placed": ["R13", "128°", "4", "7"]
+  },
+  "entities": [
+    { "kind": "circle", "at": [0, 0], "diameter": 36, "layer": "outline" },
+    { "kind": "circle", "at": [0, 0], "diameter": 17, "layer": "outline" },
+    { "kind": "circle", "at": [53, 0], "diameter": 15, "layer": "outline" },
+    { "kind": "circle", "at": [53, 0], "diameter": 8, "layer": "outline" },
+
+    { "kind": "tangent_arc", "circle_a": [0, 0, 36], "circle_b": [53, 0, 15],
+      "radius": 80, "modes": ["outer", "outer"], "pick": 1, "layer": "outline" },
+    { "kind": "tangent_arc", "circle_a": [0, 0, 36], "circle_b": [53, 0, 15],
+      "radius": 160, "modes": ["outer", "outer"], "pick": -1, "layer": "outline" },
+
+    { "kind": "centerline", "at": [0, 0], "span": 60, "angle": 0 },
+    { "kind": "centerline", "at": [0, 0], "span": 60, "angle": 90 },
+    { "kind": "centerline", "at": [53, 0], "span": 40, "angle": 0 },
+    { "kind": "centerline", "at": [53, 0], "span": 40, "angle": 90 },
+    { "kind": "center_cross", "at": [0, 0], "size": 2 },
+    { "kind": "center_cross", "at": [53, 0], "size": 1.5 }
+  ]
+}
